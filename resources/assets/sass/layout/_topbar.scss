@@ -1,0 +1,130 @@
+.topbar__wrapper {
+  border-bottom: 1px solid tint($color-primary, 48%);
+}
+
+.topbar {
+  @extend %flex__item--full-width;
+  background: tint($color-white, 50%);
+  padding: 10px 0 0;
+
+  @include respond-to('medium') {
+    padding: 8px 20px;
+  }
+}
+
+.topbar__content {
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include respond-to('medium') {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+
+.topbar__logo-wrapper {
+  text-align: center;
+
+  @include respond-to('medium') {
+    text-align: left;
+  }
+}
+
+.topbar__logo {
+  margin-top: 10px;
+  vertical-align: middle;
+
+  @include respond-to('medium') {
+    margin-top: 0;
+  }
+}
+
+.topbar__logo-link {
+  display: inline-block;
+}
+
+.topbar__subtitle {
+  @include font-size(14px);
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+
+  @include respond-to('medium') {
+    margin-left: 5px;
+    width: 40%;
+  }
+
+  @include respond-to('large') {
+    margin-left: 20px;
+    width: auto;
+  }
+}
+
+.topbar-nav {
+  line-height: 1;
+  margin-top: 20px;
+  width: 100%;
+
+  @include respond-to('medium') {
+    margin-bottom: 0;
+    margin-top: 0;
+    width: auto;
+  }
+
+  @include respond-to('large') {
+    margin-left: 20px;
+  }
+
+  @include respond-to('x-large') {
+    display: none;
+  }
+}
+
+.topbar-nav__list {
+  @extend %flex;
+  @include font-size(15px);
+  padding-left: 0;
+
+  li {
+    @extend %flex__item--1;
+    text-align: center;
+
+    @include respond-to('medium') {
+      flex: none;
+      margin-right: 20px;
+    }
+  }
+}
+
+.topbar-nav__link {
+  color: tint($color-secondary, 25%);
+  display: inline-block;
+  padding: 12px 0;
+  width: 100%;
+
+  svg {
+    height: 16px;
+    margin-right: 10px;
+    vertical-align: middle;
+    width: 16px;
+
+    @include respond-to('medium') {
+      margin-right: 5px;
+    }
+  }
+}
+
+.topbar__avatar {
+  background-size: cover;
+  display: none;
+  height: 70px;
+  width: 70px;
+
+  @include respond-to('medium') {
+    display: block;
+  }
+
+  @include respond-to('x-large') {
+    display: none;
+  }
+}

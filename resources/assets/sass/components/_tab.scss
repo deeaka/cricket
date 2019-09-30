@@ -1,0 +1,47 @@
+.tabs {
+  @extend %flex;
+  background-color: $panel-default-bg;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  position: relative;
+  width: 100%;
+
+  @include respond-to('small') {
+    flex-wrap: nowrap;
+  }
+}
+
+.tab {
+  display: block;
+  flex: 1 100%;
+  letter-spacing: .8px;
+  text-align: center;
+  text-transform: uppercase;
+
+  a {
+    color: shade($color-primary, 45%);
+    display: block;
+    height: 100%;
+    padding: 20px 0;
+    width: 100%;
+  }
+}
+
+.tab--active a {
+  color: $color-primary;
+}
+
+.tabs__indicator {
+  background-color: $color-primary;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: 55px;
+
+  @include respond-to('small') {
+    bottom: 0;
+    top: auto;
+  }
+}

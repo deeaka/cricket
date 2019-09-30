@@ -1,0 +1,56 @@
+.hero {
+  background-color: shade($color-secondary, 50%); //fallback
+  background-position: 50% 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $color-white;
+  height: 60vh;
+  min-height: 300px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  &.uploading::before {
+    //scss-lint:disable ColorVariable
+    background: rgba(0, 0, 0, .5);
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  + div {
+    margin-top: -6vh;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.hero__heading {
+  width: 100%;
+}
+
+.hero__title {
+  @include font-size(58px);
+  margin-left: auto;
+  margin-right: auto;
+
+  @include respond-to('medium') {
+    max-width: 90%;
+  }
+
+  @include respond-to('large') {
+    max-width: 80%;
+  }
+}
+
+.hero__title--small {
+  @include font-size(48px);
+}
+
+.hero__subtitle {
+  @include font-size(18px);
+  color: shade($color-white, 20%);
+}

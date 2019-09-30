@@ -1,0 +1,50 @@
+%flex {
+  display: flex;
+}
+
+%flex--center {
+  justify-content: center;
+}
+
+%flex--space-between {
+  justify-content: space-between;
+}
+
+%flex--end {
+  justify-content: flex-end;
+}
+
+%flex--top {
+  align-items: flex-start;
+}
+
+%flex--middle {
+  align-items: center;
+}
+
+%flex--bottom {
+  align-items: flex-end;
+}
+
+%flex--wrap {
+  flex-wrap: wrap;
+}
+
+//flex items
+%flex__item--none {
+  flex: none;
+}
+
+%flex__item--auto {
+  flex: auto;
+}
+
+%flex__item--full-width {
+  flex: 1 100%;
+}
+
+@for $i from 1 through 6 {
+  %flex__item--#{$i} {
+    flex: $i;
+  }
+}

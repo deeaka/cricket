@@ -1,0 +1,137 @@
+$table-border-color: #dfdfdf;
+$table-hover-color: #f0f0f0;
+$table-padding-horizontal: 12px;
+$table-padding-vertical: 5px;
+$table-padding: $table-padding-horizontal $table-padding-vertical;
+
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  // line-height: 2.5;
+  padding: 8px;
+  width: 100%;
+
+  svg {
+    vertical-align: middle;
+  }
+
+  th:not(.text--center) {
+    text-align: left;
+  }
+
+  td,
+  th {
+     padding: $table-padding;
+  }
+
+  td a {
+    vertical-align: middle;
+  }
+}
+
+.table--bordered {
+  th {
+    border-bottom: 2px solid $table-border-color;
+  }
+
+  tbody td {
+    border-top: 1px solid $table-border-color;
+  }
+
+  tr:last-child td {
+    border-bottom: 1px solid $table-border-color;
+  }
+}
+
+.table--hover {
+  tbody>tr:hover {
+    background-color: $table-hover-color;
+  }
+}
+
+.table--responsive {
+  th {
+    display: none;
+  }
+
+  td {
+    display: block;
+    margin: .5em auto;
+    max-width: 300px;
+
+    @include respond-to('small') {
+      max-width: 400px;
+    }
+
+    @include respond-to('medium') {
+      margin: 0;
+      max-width: none;
+    }
+
+    &:first-child {
+      padding-top: .8em;
+
+      @include respond-to('medium') {
+        padding-top: $table-padding-horizontal;
+      }
+    }
+
+    &:last-child {
+      border-bottom: 1px solid $table-border-color;
+      padding-bottom: 3.6em;
+
+      @include respond-to('medium') {
+        padding-bottom: $table-padding-horizontal;
+      }
+    }
+
+    &::before {
+      content: attr(data-th)' ';
+      display: inline-block;
+      font-weight: bold;
+      width: 88px;
+
+      @include respond-to('medium') {
+        display: none;
+      }
+    }
+  }
+
+  th,
+  td {
+    padding: 0;
+    // text-align: center;
+
+    @include respond-to('medium') {
+      display: table-cell;
+      padding: $table-padding;
+      text-align: left;
+    }
+  }
+
+  &.table--bordered {
+    th {
+      border-bottom: 0;
+
+      @include respond-to('medium') {
+        border-bottom: 2px solid $table-border-color;
+      }
+    }
+
+    tbody td {
+      border-top: 0;
+
+      @include respond-to('medium') {
+        border-top: 1px solid $table-border-color;
+      }
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+
+      @include respond-to('medium') {
+        border-bottom: 1px solid $table-border-color;
+      }
+    }
+  }
+}

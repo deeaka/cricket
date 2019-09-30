@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 90%;
+
+  @include respond-to('medium') {
+    font-size: 95%;
+  }
+
+  @include respond-to('large') {
+    font-size: 100%;
+  }
+}
+
+body {
+  @include font-size(18px);
+  // background: darken($color-white, 5%);
+  background: $color-white;
+  color: $color-black;
+  font-family: $roboto;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+small {
+  color: $color-muted;
+  display: block;
+  margin: 15px 0;
+}

@@ -1,0 +1,81 @@
+$helper-margin-size: 30px;
+$helper-padding-size: 30px;
+
+//  Visibility Helper classes
+.hidden {
+  //scss-lint:disable ImportantRule
+  height: 0;
+  margin: 0 !important;
+  opacity: 0;
+  padding: 0 !important;
+  visibility: hidden;
+
+  > * {
+    display: none !important;
+  }
+}
+
+// Margins Helper classes
+.margin--top {
+  margin-top: $helper-margin-size;
+}
+
+.margin--bottom {
+  margin-bottom: $helper-margin-size;
+}
+
+.margin--bottom-none {
+  //scss-lint:disable ImportantRule
+  margin-bottom: 0 !important;
+}
+
+.margin--top-lg {
+  margin-top: $helper-margin-size * 2;
+}
+
+.margin--bottom-lg {
+  margin-bottom: $helper-margin-size * 2;
+}
+
+// Padding Helper classes
+.padding--top {
+  padding-top: $helper-padding-size;
+}
+
+.padding--bottom {
+  padding-bottom: $helper-padding-size;
+}
+
+.padding--bottom-lg {
+  padding-bottom: $helper-padding-size * 2;
+}
+
+.padding--left {
+  padding-left: $helper-padding-size;
+}
+
+.padding--right {
+  padding-right: $helper-padding-size;
+}
+
+.padding--remove {
+  padding: 0 !important;
+}
+
+// Text Align Helper classes
+.text--left {
+  text-align: left;
+}
+
+.text--center {
+  text-align: center;
+}
+
+.text--right {
+  text-align: right;
+}
+
+// Float Helper classes
+.float--right {
+  float: right;
+}

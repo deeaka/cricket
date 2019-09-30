@@ -1,0 +1,23 @@
+.button-group {
+  margin: 10px 0 0;
+}
+
+.button-group:not(.hidden) {
+  height: auto;
+
+  .btn {
+    vertical-align: middle;
+  }
+
+  .btn--md {
+    width: 90px;
+
+    @include respond-to('small') {
+      width: 110px;
+    }
+  }
+}
+
+.button-group--right {
+  text-align: right;
+}

@@ -1,0 +1,39 @@
+$list-icon-width: 1.5em;
+
+%list-icon {
+  padding-left: $list-icon-width;
+
+  &::before {
+    background: url($img-dir + 'icons/file.svg') no-repeat;
+    color: $color-primary;
+    content: '';
+    display: inline-block;
+    height: $list-icon-width;
+    margin-left: -$list-icon-width;
+    position: absolute;
+    width: $list-icon-width;
+  }
+}
+
+%clearfix {
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    overflow: hidden;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+/// Styles for medium editor editable input area(s) (when focused)
+%editor-input-element {
+  outline: 1px dotted tint($color-primary, 70%);
+
+  &:focus {
+    background: rgba($color-secondary, .04);
+    outline: 0 solid transparent;
+  }
+}

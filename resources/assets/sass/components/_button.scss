@@ -1,0 +1,105 @@
+$btn-danger-bg: #910808;
+$btn-default-bg: #ccc;
+$btn-default-color: #333;
+
+.btn {
+  border: 1px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $roboto;
+  font-weight: normal;
+  line-height: 1;
+  margin-bottom: 0;
+  padding: 8px 15px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.btn--lg {
+  @include font-size(18px);
+  line-height: 1.33;
+  padding: 10px 16px;
+}
+
+.btn--md {
+  @include font-size(16px);
+  padding: 8px;
+
+  @include respond-to('small') {
+    padding: 8px 14px;
+  }
+}
+
+.btn--sm {
+  @include font-size(13px);
+  border-radius: 0;
+  padding: 4px 9px;
+}
+
+.btn--primary {
+  background: $color-highlight;
+  color: $color-white;
+}
+
+.btn--secondary {
+  background: mix($color-highlight-darker, $color-white);
+  color: $color-white;
+}
+
+.btn--danger {
+  background: $btn-danger-bg;
+  color: $color-white;
+}
+
+.btn--default {
+  background: $btn-default-bg;
+  color: $btn-default-color;
+}
+
+.btn--muted {
+  background: tint($btn-default-bg, 50%);
+  color: tint($btn-default-color, 25%);
+}
+
+.btn--muted-inverse {
+  background: tint($btn-default-color, 25%);
+  color: tint($btn-default-bg, 50%);
+}
+
+%btn--outline {
+  background: transparent;
+}
+
+.btn--outline {
+  @extend %btn--outline;
+  border: 2px solid tint($color-muted, 25%);
+  color: tint($color-muted, 25%);
+}
+
+.btn--outline-danger {
+  @extend %btn--outline;
+  border: 2px solid $btn-danger-bg;
+  color: $btn-danger-bg;
+}
+
+%btn--flat {
+  background: transparent;
+  border: 0;
+}
+
+.btn--flat {
+  @extend %btn--flat;
+  color: tint(desaturate($color-highlight, 60%), 10%);
+}
+
+.btn--flat-danger {
+  @extend %btn--flat;
+  color: tint(desaturate($btn-danger-bg, 60%), 10%);
+}
+
+.btn--disabled {
+  opacity: .6;
+  pointer-events: none;
+}

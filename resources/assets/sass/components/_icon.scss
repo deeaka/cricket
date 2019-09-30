@@ -1,0 +1,60 @@
+$icons-dir: $img-dir + 'icons/';
+
+.icon {
+  display: inline-block;
+  margin-right: 5px;
+  pointer-events: none;
+  position: relative;
+  vertical-align: middle;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    height: 16px;
+    vertical-align: top;
+    width: 16px;
+  }
+}
+
+.icon--edit {
+  &::before {
+    background: url($icons-dir + 'pencil.svg') no-repeat;
+  }
+}
+
+.icon--delete {
+  &::before {
+    background: url($icons-dir + 'delete.svg') no-repeat;
+  }
+}
+
+.icon--save {
+  &::before {
+    background: url($icons-dir + 'save.svg') no-repeat;
+  }
+}
+
+.icon--cancel {
+  &::before {
+    background: url($icons-dir + 'cancel.svg') no-repeat;
+  }
+}
+
+.icon--create-user {
+  &::before {
+    background: url($icons-dir + 'create_user.svg') no-repeat;
+  }
+}
+
+.icon--create-avatar {
+  &::before {
+    background: url($icons-dir + 'create_avatar.svg') no-repeat;
+    vertical-align: middle;
+  }
+}
+
+.icon--create-course {
+  &::before {
+    background: url($icons-dir + 'create_course.svg') no-repeat;
+  }
+}

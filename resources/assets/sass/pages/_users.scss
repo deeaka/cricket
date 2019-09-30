@@ -1,0 +1,86 @@
+.users__header {
+  margin: 15px 0 30px;
+
+  svg {
+    margin-right: 10px;
+    vertical-align: bottom;
+  }
+}
+
+.users__checkbox {
+  @include respond-to('medium') {
+    text-align: center;
+  }
+}
+
+.users__status-icon {
+  min-width: 35px;
+  padding: 0 5px;
+  position: relative;
+  text-align: center;
+
+  svg {
+    bottom: -24px;
+    position: absolute;
+
+    @include respond-to('medium') {
+      position: static;
+    }
+  }
+}
+
+.table--responsive {
+  .users__status-icon {
+    margin-bottom: -20px;
+    text-align: left;
+
+    @include respond-to('medium') {
+      margin-bottom: 0;
+      text-align: center;
+    }
+ }
+
+ .users__avatar-container {
+   text-align: left;
+
+   @include respond-to('medium') {
+     text-align: right;
+   }
+ }
+}
+
+.users__avatar {
+  border-radius: 50%;
+  height: 28px;
+  margin-right: 10px;
+  vertical-align: middle;
+  width: 28px;
+}
+
+.user__personal-details {
+  flex-wrap: wrap;
+
+  @include respond-to('medium') {
+    flex-wrap: nowrap;
+  }
+}
+
+.user__button-grp {
+  margin-top: 12px;
+
+  @include respond-to('medium') {
+    margin-top: 0;
+  }
+
+  .btn {
+    margin-right: 8px;
+
+    @include respond-to('medium') {
+      margin-right: 4px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

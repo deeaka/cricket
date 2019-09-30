@@ -1,0 +1,56 @@
+.sidebar {
+  @include font-size(16px);
+  background: $color-primary;
+  display: none;
+  height: 100%;
+  position: fixed;
+  width: $sidebar-width;
+  z-index: 1;
+
+  @include respond-to('x-large') {
+    display: block;
+  }
+}
+
+.avatar {
+  background: $color-secondary;
+  color: tint($color-white, 2%);
+  text-align: center;
+}
+
+.avatar-figure {
+  margin: 0;
+  padding: 40px 20px 10px;
+}
+
+.avatar__name {
+  @include font-size(23px);
+  font-weight: 600;
+}
+
+.avatar__status {
+  @include font-size(12px);
+  background: $color-highlight;
+  border-radius: 15px;
+  display: inline-block;
+  margin-bottom: 40px;
+  padding: 10px 20px;
+}
+
+.sidebar-nav__links {
+  list-style: none;
+}
+
+.sidebar-nav__link {
+  color: $color-white;
+  display: inline-block;
+  margin: 5px 0;
+  text-decoration: none;
+
+  svg {
+    height: 16px;
+    margin-right: 10px;
+    vertical-align: middle;
+    width: 16px;
+  }
+}
